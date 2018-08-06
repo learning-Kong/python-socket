@@ -7,7 +7,7 @@ import json
 
 client = socket.socket(socket.AF_INET,socket.SOCK_STREAM)
 
-client.connect(('127.0.0.1',9994))
+client.connect(('127.0.0.1',9995))
 
 while True:
 
@@ -22,7 +22,7 @@ while True:
 
     #3.接受json数据
 
-    header_json_rev = client.recv(1024)
+    header_json_rev = client.recv(header_size_len)
     print(header_json_rev)
 
     #3.2 解析json数据
