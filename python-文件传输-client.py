@@ -40,7 +40,6 @@ def get(client):
         else:
             new_file_md5 = m.hexdigest()
             recv_file_md5 = client.recv(1024)
-            print (1)
             if new_file_md5 == recv_file_md5.decode('utf-8'):
                 print ('\033[31;2m recv success\033[0m')
 
