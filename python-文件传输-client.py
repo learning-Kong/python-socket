@@ -53,7 +53,6 @@ def main():
         if not cmds:
             continue
         client.send(cmds.encode('utf-8'))
-
         com_type = cmds.split()[0]
         if com_type == 'get':
             get(client)
